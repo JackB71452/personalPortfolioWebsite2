@@ -73,6 +73,11 @@ else {
     
     console.log(scrollPosition)
     
+if (scrollPosition >= 1500){
+  bar.style.opacity = 1;
+}
 });
+
+
 
 
