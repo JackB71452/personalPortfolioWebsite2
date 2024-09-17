@@ -1,32 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all elements with the class 'fade-in'
-    const fadeElements = document.querySelectorAll('.fadeIn');
-  
-    // Options for the Intersection Observer
-    const options = {
-      root: null, // Use the viewport as the root
-      rootMargin: '0px', // No margin around the root
-      threshold: 0.4 // Trigger when 40% of the element is visible
-    };
-  
-    // Callback function for the Intersection Observer
-    const handleIntersection = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active'); // Add class to start animation
-          observer.unobserve(entry.target); // Stop observing once animated
-        }
-      });
-    };
-  
-    // Create the Intersection Observer
-    const observer = new IntersectionObserver(handleIntersection, options);
-  
-    // Observe each element
-    fadeElements.forEach(element => {
-      observer.observe(element);
+  // Select all elements with the class 'fadeIn'
+  const fadeElements = document.querySelectorAll('.fadeIn');
+
+  // Options for the Intersection Observer
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px', // No margin around the root
+    threshold: 0.4 // Trigger when 40% of the element is visible
+  };
+
+  // Callback function for the Intersection Observer
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active'); // Add class to start animation
+      } else {
+        entry.target.classList.remove('active'); // Remove class to reset animation
+      }
     });
+  };
+
+  // Create the Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  // Observe each element
+  fadeElements.forEach(element => {
+    observer.observe(element);
   });
+});
 
   // script.js
   document.addEventListener('scroll', function() {
