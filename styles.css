@@ -1,0 +1,309 @@
+* {
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: white;
+    color: white;
+    overflow-y: visible;
+}
+
+.navbar { /* Start off-screen */
+    opacity: 0;
+    background-color: white;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed; /* Fixed to make it stay at the top */
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    top: 0; /* Initial top position */
+    left: 0; /* Adjust based on your layout needs */
+    width: 100%; /* Or adjust based on your layout needs */
+}
+
+.navbar .links {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Changed 'right' to 'flex-end' */
+    align-items: center;
+    height: 50px;
+    z-index: 40;
+}
+
+.navbar .links a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px; /* Ensure correct syntax */
+    display: block;
+    z-index: 40;
+}
+
+.navbar .links a:hover {
+    background-color: #D3D3D3;
+    border-radius: 10px;
+}
+
+.Home {
+    background-size: 100% 100%;
+    background-image: url("./assets/hero.jpg");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.heroText{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.heroText .textBubble .text {
+    color: white;
+    padding: 10px 30px; /* Ensure correct syntax */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heroText .textBubble .text1 {
+    text-align: center;
+}
+
+
+.filler {
+    height: 150vh;
+    background: #6699cc;
+}
+
+.grad {
+    background-image: linear-gradient(#6699cc, white)
+}
+
+.textBubble {
+    filter: drop-shadow(30px 10px 4px white);
+    background-color: black;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(50%);
+}
+
+.work-list{
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin: 10 20 10 20;
+    overflow-y: hidden;
+    justify-content: center;
+}
+
+.work img{
+    width: 31.65vw;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 75%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgb(62, 62, 205));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color:rgb(62, 62, 205);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid rgb(62, 62, 205);
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.btn:hover{
+    background:rgb(91, 99, 202);
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 49;
+    position: relative;
+    margin-left: 2.5vw;
+}
+
+#projects h1{
+    color: black;
+    text-align: center;
+}
+
+.container2{
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 img{
+    width: 40vw;
+    height: 70vh;
+    border-radius: 20px;
+    border: solid black;
+}
+
+.container2{
+    color: black;
+}
+
+#textContainer{
+    padding: 20 20 20 20;
+}
+
+
+#aboutMe{
+    display: flex;
+    flex-direction: row;
+}
+
+.text5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.text5 img{
+    width: 40px;
+}
+.text5 a{
+    position: relative;
+    z-index: 101;
+    text-decoration: none;
+    color: black;
+    margin: 15 20 15 20;
+    overflow-y: hidden;
+}
+
+#content{
+    overflow-x: hidden;
+}
+
+.footer{
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    z-index: 300;
+    background-color: black;
+}
+
+.footer h3{
+    color: white;
+    margin-left: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+
+.arrow-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000; 
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #000; 
+    margin: 0 auto;
+    animation: bob 1s infinite;
+}
+
+@keyframes bob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
